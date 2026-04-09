@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+/* Infos in the figma and the styling guide in the drive folder */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
