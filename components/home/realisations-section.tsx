@@ -44,7 +44,7 @@ export default function RealisationsSection() {
           </div>
         </div>
 
-        <div className="flex flex-wrap items-center justify-center gap-[27px] lg:border border-surface-muted rounded-10 p-3 lg:p-10 xl:gap-6">
+        <div className="flex flex-wrap items-center justify-center gap-[27px] lg:border border-surface-muted rounded-[40px] p-3 lg:p-10 xl:gap-6 2xl:gap-[40px]">
           {filtered.map((project) => (
             <ProjectCard
               key={project.id}

@@ -39,7 +39,7 @@ const Testimonial = () => {
           ))}
         </div>
 
-        <div className="flex flex-col justify-center items-center gap-7.5 mt-2 lg:gap-10.5">
+        <div className="flex flex-col justify-center items-center gap-7.5  lg:gap-10.5">
           <span className="hidden md:flex">
             <Tag>Ceux qui nous ont fait confiance</Tag>
           </span>
@@ -51,19 +51,20 @@ const Testimonial = () => {
                 src={logo}
                 alt={`Logo ${index}`}
                 height={40}
-                width={140}
-                className=" "
+                width={163}
+                style={{ height: "auto" }}
               />
             ))}
           </div>
         </div>
       </div>
       <div className="flex md:hidden items-center justify-center py-8">
-        <div className="relative w-full xs:w-95 h-92.5 rounded-7.5 overflow-hidden group">
+        <div className="relative w-full xs:w-95 h-92.5 rounded-[30px] overflow-hidden group">
           <Image
             src="/png/about.png"
             alt={"title"}
             fill
+            sizes="(max-width: 480px) 100vw, 380px"
             className="object-cover transition-transform duration-500 group-hover:scale-105"
           />
         </div>

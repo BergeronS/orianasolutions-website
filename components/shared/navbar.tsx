@@ -26,16 +26,17 @@ export default function Navbar() {
   const close = () => setOpen(false);
 
   return (
-    <>
-      <nav className="relative z-50 w-full bg-primary-light backdrop-blur-[19.56px] px-6 sm:px-16 xl:px-25 py-10 2xl:px-35 2xl:py-13.25">
+    <div className="bg-primary-light backdrop-blur-[19.56px]">
+      <nav className="relative z-50 w-full  px-6 sm:px-16 xl:px-25 py-10 2xl:px-35 2xl:py-13.25 max-w-[1980px] mx-auto">
         <div className="flex items-center justify-between">
           <Link href="/" onClick={close}>
             <Image
               src="/svg/Logo_Oriana_Primaire_Noir.svg"
               alt="Oriana Solutions"
-              width={180}
-              height={66}
-              className="w-37.5 h-auto xl:w-45"
+              width={225}
+              height={65}
+              className="w-37.5 xl:w-45"
+              style={{ height: "auto" }}
               priority
             />
           </Link>
@@ -122,6 +123,6 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

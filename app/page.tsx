@@ -6,7 +6,6 @@ import RealisationsSection from "@/components/home/realisations-section";
 import About from "@/components/home/about";
 import AboutSection from "@/components/home/about-section";
 import Testimonial from "@/components/home/testimonial";
-import CtaSection from "@/components/home/cta-section";
 import Footer from "@/components/shared/footer";
 
 export default function Home() {
@@ -20,7 +19,6 @@ export default function Home() {
       <RealisationsSection/>
       <AboutSection/>
       <Testimonial/>
-      <CtaSection/>
       <Footer/>
     </>
   );
