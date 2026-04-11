@@ -1,7 +1,45 @@
 @import "tailwindcss";
 
-/* Infos in the figma and the styling guide in the drive folder */
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ── Nimbus Sans L (self-hosted) ── */
+@font-face {
+  font-family: "Nimbus Sans L";
+  src: url("/fonts/nimbus-sans-l/NimbusSanL-Reg.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nimbus Sans L";
+  src: url("/fonts/nimbus-sans-l/NimbusSanL-Bol.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* ── Tailwind v4 Theme ── */
+@theme {
+  /* Breakpoints */
+  --breakpoint-xs: 430px;
+
+  /* Colors */
+  --color-primary: #0f53f2;
+  --color-primary-dark: #0f4cde;
+  --color-primary-light: #d6e7fd;
+  --color-title: #000000;
+  --color-body: #010d3e;
+  --color-muted: #535353;
+  --color-subtle: #646464;
+  --color-heading: #131313;
+  --color-surface: #ffffff;
+  --color-surface-light: #f4f4f4;
+  --color-surface-muted: #e9e9e9;
+  --color-border: #1B1B1B14;
+  --color-border-dark: #222222;
+  --color-outline: #aaaaaa;
+
+  /* Font families */
+  --font-heading: "Nimbus Sans L", var(--font-inter), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
 }

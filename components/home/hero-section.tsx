@@ -1,0 +1,63 @@
+import Image from "next/image";
+import Button from "@/components/ui/button";
+import Container from "@/components/shared/container";
+
+export default function HeroSection() {
+  return (
+    <section className="relative overflow-hidden bg-primary-light">
+      <div className="absolute right-0 -bottom-20 xl:inset-y-0  w-72 md:w-[480px] xl:w-[720px] 2xl:w-[700px] overflow-hidden flex items-end xl:items-center">
+        <Image
+          src="/svg/Logo_Oriana_Symbole_Noir.svg"
+          alt=""
+          aria-hidden
+          width={900}
+          height={900}
+          className="w-full translate-x-3 translate-y-3 xl:translate-y-0"
+          style={{
+            filter:
+              "invert(27%) sepia(96%) saturate(1800%) hue-rotate(210deg) brightness(98%) contrast(88%)",
+            opacity: 0.22,
+          }}
+          priority
+        />
+      </div>
+
+      <Container className="relative z-10">
+        <div className="flex flex-col items-center text-center md:items-start md:text-left gap-5 md:gap-6 md:gap-8 w-full md:max-w-[70%] 2xl:max-w-229.75">
+          <span className="lg:hidden inline-flex items-center px-5 py-1 rounded-2.5 border border-[#C8C8C8] text-sm text-title">
+            Everything you need
+          </span>
+
+          <h1 className="font-heading  leading-none text-5xl xl:text-[72px] 2xl:text-[91px] 2xl:leading-[91px] text-title">
+            Donnez vie à vos ambitions numériques.
+          </h1>
+
+          <p className="text-sm leading-6 md:text-lg md:leading-7 xl:text-2xl xl:leading-8 2xl:text-[31px] 2xl:leading-[43px] 2xl:tracking-[-1.1px] text-body">
+            Oriana Solutions, votre expert en applications mobiles, web, SaaS et
+            automatisation IA sur mesure.
+          </p>
+
+          <div className="flex flex-wrap xs:flex-nowrap md:mt-8 gap-1.5 xs:gap-[23px] w-full">
+            <Button href="#contact">Nous contacter</Button>
+            <Button
+              variant="outline"
+              href="#realisations"
+              icon={
+                <Image
+                  src="/svg/arrow-right-bold.svg"
+                  alt=""
+                  width={16}
+                  height={16}
+                />
+              }
+            >
+              Nos réalisations
+            </Button>
+          </div>
+        </div>
+      </Container>
+
+      <div className="h-44 md:h-36 xl:hidden" />
+    </section>
+  );
+}
