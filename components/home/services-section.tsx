@@ -5,20 +5,22 @@ import Container from "../shared/container";
 
 export default function ServicesSection() {
   return (
-    <Container className="w-full py-0!">
-      <div className="flex flex-col lg:flex-row  gap-[66px]">
-        <div className="hidden lg:flex w-full lg:w-[45%] 2xl:flex-1 relative min-h-[320px] md:min-h-[440px] lg:min-h-[647px] shrink-0">
-          <div className="absolute inset-0 rounded-5 overflow-hidden">
+    <Container className="w-full py-0! 2xl:px-[140px]!">
+      <div className="flex flex-col lg:flex-row 2xl:pl-20 gap-[49px] md:gap-[66px]">
+        
+        <div className=" hidden lg:flex flex-1 max-w-[532px] relative min-h-[599px] ">
+          <div className="absolute inset-0 rounded-[32px] overflow-hidden">
             <Image
               src="/png/about.png"
               alt="À propos de Oriana Solutions"
               fill
+              sizes="(max-width: 1024px) 100vw, 45vw"
               className="object-cover"
             />
           </div>
         </div>
 
-        <div className="flex flex-col gap-[49px] md:gap-4 w-full lg:w-[50%] 2xl:w-[776px] shrink-0 justify-center py-2">
+        <div className="flex flex-col gap-[49px] md:gap-4 w-full lg:w-[50%] 2xl:w-[776px] shrink-0 justify-center py-5">
           {services.map((service) => (
             <ServiceCard
               key={service.id}

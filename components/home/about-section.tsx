@@ -3,7 +3,7 @@ import Container from "../shared/container";
 
 export default function AboutSection() {
   return (
-    <Container parentStyle="hidden lg:flex bg-surface-muted">
+    <Container parentStyle="hidden lg:flex bg-surface-muted rounded-[20px]"  className="py-[52px]!">
       <div className="flex flex-col gap-10 xl:gap-[70px] 2xl:gap-30 w-full">
         <p className="font-heading font-normal text-[22px] leading-[30px] md:text-[28px] md:leading-[36px] xl:text-[36px] xl:leading-[44px] xl:tracking-[-1.08px] text-title max-w-full xl:max-w-[677px]">
           De la stratégie à l&apos;exécution, nous connectons les entreprises
@@ -14,7 +14,7 @@ export default function AboutSection() {
           {stats.map((stat) => (
             <div
               key={stat.id}
-              className="bg-surface-light rounded-4 p-5 xl:p-6 flex flex-col gap-7.5 xl:gap-16"
+              className="bg-surface-light rounded-[20px] p-5 xl:p-6 flex flex-col gap-7.5 xl:gap-16"
             >
               <span className="text-[11px] xl:text-[14px] leading-[20px] tracking-[1.68px] uppercase text-muted font-normal">
                 {stat.label}

@@ -8,7 +8,7 @@ interface TestimonialCardProps {
 
 const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial }) => {
   return (
-    <div className="flex flex-col items-center justify-center w-full gap-6 p-7.5 border border-[#1b1b1b14] rounded-5 shadow-xl ">
+    <div className="flex flex-col items-center justify-center w-full gap-6 p-7.5 rounded-[20px] border border-[#1b1b1b14] shadow-xl ">
       {/* Quote */}
       <p className="max-w-[245px] text-base font-body text-black leading-[23px] tracking-[-1%]">
         {testimonial.quote}{" "}

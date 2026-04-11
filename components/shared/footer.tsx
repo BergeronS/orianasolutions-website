@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import Container from "./container";
-import {IconInstagram , IconFacebook, IconLinkedIn} from "@/svgs/index"
+import {IconInstagram , IconFacebook, IconLinkedIn, Arrow} from "@/svgs/index"
+import Button from "../ui/button";
 
 
 
@@ -36,23 +37,80 @@ const bottomLinks = [
  
 export default function Footer() {
   return (
-    <Container parentStyle="bg-primary" className="py-13!">
+    <section className="mt-28  overflow-hidden ">
+      <Container
+        parentStyle="bg-primary rounded-tl-[28px] rounded-tr-[28px] "
+        className="relative py-[52px]!"
+      >
+        <div className="hidden lg:flex absolute -right-10 -top-12 inset-y-0 w-[320px] md:w-120 xl:w-155 2xl:h-[539px] 2xl:w-[695px] flex items-center pointer-events-none select-none">
+          <Image
+            src="/svg/Logo_Oriana_Symbole_Noir.svg"
+            alt=""
+            aria-hidden
+            width={900}
+            height={900}
+            className="w-full translate-x-3"
+            style={{
+              filter:
+                "invert(20%) sepia(90%) saturate(1200%) hue-rotate(210deg) brightness(60%) contrast(100%)",
+              opacity: 0.45,
+            }}
+            priority
+          />
+        </div>
+
+        <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-10">
+
+          <div className="flex flex-col gap-2.5 w-full lg:max-w-150 text-center lg:text-left">
+            <h2 className="text-[38px] leading-10 font-medium md:text-[59px] md:leading-14.75 tracking-[-0.06em] text-white">
+              Donnez vie à vos ambitions numériques.
+            </h2>
+
+            <p className="mt-2  leading-[31px] md:text-[20.44px] md:leading-[29.39px] tracking-[-3.6%] font-normal text-white/90 max-w-130 mx-auto lg:mx-0">
+              Nous bâtissons des solutions logicielles intuitives et des sites
+              vitrines prestigieux qui reflètent l&apos;excellence de votre
+              organisation.
+            </p>
+
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-[21px] mt-4">
+              <Button
+                href="#contact"
+                variant="outline"
+                className="bg-primary-light border-transparent text-heading font-medium hover:bg-white w-fit! rounded-[10px] xl:rounded-[13px]! "
+              >
+                Prendre rendez-vous
+              </Button>
+
+              <Link
+                href="#services"
+                className="hidden lg:inline-flex items-center gap-1.5 text-white text-[16px] md:text-[22.36px] leading-6.75 tracking-[-0.45px] hover:underline transition-opacity hover:opacity-80"
+              >
+                En savoir plus
+                <Arrow className="h-[25px]! w-[25px]! text-white"/>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </Container>
+    <Container parentStyle="bg-primary" className="py-10!">
+
       <footer className="flex flex-col gap-13">
-        <div className="flex flex-col gap-6 lg:gap-10 lg:flex-row lg:justify-between  ">
+        <div className="flex flex-col gap-12 2xl:gap-[217px] lg:flex-row lg:justify-between  ">
           {/* Left: Logo + description */}
-          <div className="flex flex-col gap-5 lg:max-w-95">
+          <div className="flex flex-col gap-5 w-[300px] 2xl:w-[592px]">
             <Link href="/" aria-label="Oriana Solutions – accueil">
               <Image
                 src="/svg/Logo_Oriana_Primaire_Blanc.svg"
                 alt="Oriana Solutions"
                 width={319}
                 height={96}
-                className="w-50 md:w-65 xl:w-79.75 h-auto"
+                className="w-50 md:w-65 xl:w-79.75"
+                style={{ height: "auto" }}
                 priority
               />
             </Link>
 
-            <p className="text-base leading-6 tracking-[-0.02em] font-normal text-[#B7B7B7] max-w-95">
+            <p className="text-base leading-6 tracking-[-0.02em] font-normal text-[#B7B7B7]  ">
               Partner with us to achieve sustainable growth and success.
             </p>
           </div>
@@ -60,7 +118,7 @@ export default function Footer() {
           {/* Middle: Nav columns */}
           <nav
             aria-label="Footer navigation"
-            className="flex gap-4 sm:gap-7 flex-col justify-between md:flex-row"
+            className="flex gap-4 sm:gap-8 flex-col justify-between md:flex-row"
           >
             {navColumns.map((col, i) => (
               <ul key={i} className="flex flex-col gap-4  ">
@@ -148,5 +206,6 @@ export default function Footer() {
         </div>
       </footer>
     </Container>
+    </section>
   );
 }

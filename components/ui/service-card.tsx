@@ -17,8 +17,8 @@ export default function ServiceCard({
         <h3 className="font-heading font-normal text-xl leading-7 md:text-2xl md:leading-8 text-heading">
           {title}
         </h3>
-        <div className="flex flex-col items-center justify-center sm:flex-row sm:items-center sm:justify-between gap-4">
-          <p className="text-center sm:text-start text-sm leading-5.5 md:text-base md:leading-6 text-[#646464] ">
+        <div className="flex flex-col items-center justify-center w-full sm:flex-row sm:items-center sm:justify-between gap-4">
+          <p className="max-w-[458px] text-center sm:text-start  leading-5.5  text-base md:leading-6 text-[#646464] ">
             {description}
           </p>
           <Button
