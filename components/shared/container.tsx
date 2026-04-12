@@ -12,7 +12,7 @@ export default function Container({
   return (
     <div className={parentStyle}>
       <div
-        className={`w-full px-[27px] py-[55px] md:px-10 xl:px-20 2xl:px-34 xl:py-[127px] max-w-[2040px] mx-auto ${className}`}
+        className={`w-full px-[27px] py-[55px] md:px-10 xl:px-20 2xl:px-34 xl:py-[70px] max-w-[2040px] mx-auto ${className}`}
       >
         {children}
       </div>

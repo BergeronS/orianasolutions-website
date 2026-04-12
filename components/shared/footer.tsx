@@ -3,44 +3,14 @@ import Link from "next/link";
 import Container from "./container";
 import { IconInstagram, IconFacebook, IconLinkedIn, Arrow } from "@/svgs/index"
 import Button from "../ui/button";
-
-
-
-const navColumns = [
-  {
-    links: [{ label: "Accueil", href: "/" }],
-  },
-  {
-    links: [
-      { label: "Services", href: "#services" },
-      { label: "Applications web", href: "#services" },
-      { label: "Micro SaaS", href: "#services" },
-      { label: "Site Web sur mesure", href: "#services" },
-    ],
-  },
-  {
-    links: [
-      { label: "Blogs", href: "#" },
-      { label: "Inner blog", href: "#" },
-    ],
-  },
-];
-
-const bottomLinks = [
-  { label: "Privacy Policy", href: "#" },
-  { label: "Terms of Service", href: "#" },
-  { label: "Cookies Settings", href: "#" },
-];
-
-
-
+import { navColumns, bottomLinks } from "@/data/navigation";
 
 export default function Footer() {
   return (
-    <section className="mt-28  overflow-hidden ">
+    <section className="mt-7 sm:mt-28  overflow-hidden ">
       <Container
-        parentStyle="bg-primary rounded-tl-[28px] rounded-tr-[28px] "
-        className="relative py-[52px]!"
+        parentStyle="bg-primary rounded-t-3xl"
+        className="relative py-14!"
       >
         <div className="hidden lg:flex absolute -right-10 -top-12 inset-y-0 w-[320px] md:w-120 xl:w-155 2xl:h-[539px] 2xl:w-[695px] flex items-center pointer-events-none select-none">
           <Image
@@ -61,12 +31,12 @@ export default function Footer() {
 
         <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-10">
 
-          <div className="flex flex-col gap-2.5 w-full lg:max-w-150 text-center lg:text-left">
-            <h2 className="text-[38px] leading-10 font-medium md:text-[59px] md:leading-14.75 tracking-[-0.06em] text-white">
+          <div className="flex flex-col gap-2.5 w-full lg:max-w-[700px] text-center lg:text-left">
+            <h2 className="text-[38px] leading-10 font-medium w-full  md:text-[59px] md:leading-14.75 tracking-[-0.06em] text-white">
               Donnez vie à vos ambitions numériques.
             </h2>
 
-            <p className="mt-2  leading-[31px] md:text-[20.44px] md:leading-[29.39px] tracking-[-3.6%] font-normal text-white/90 max-w-130 mx-auto lg:mx-0">
+            <p className="mt-2  leading-[31px]  text-[20.44px] md:leading-[29.39px] tracking-[-3.6%] font-normal text-white/90 sm:max-w-130 max-w-[90%] mx-auto lg:mx-0">
               Nous bâtissons des solutions logicielles intuitives et des sites
               vitrines prestigieux qui reflètent l&apos;excellence de votre
               organisation.
@@ -76,7 +46,7 @@ export default function Footer() {
               <Button
                 href="#contact"
                 variant="outline"
-                className="bg-primary-light border-transparent text-heading font-medium hover:bg-white w-fit! rounded-[10px] xl:rounded-[13px]! "
+                className="bg-primary-light border-transparent text-heading font-medium hover:bg-white w-fit! rounded-xl xl:rounded-2xl! "
               >
                 Prendre rendez-vous
               </Button>
@@ -95,7 +65,7 @@ export default function Footer() {
       <Container parentStyle="bg-primary" className="py-10!">
 
         <footer className="flex flex-col gap-13">
-          <div className="flex flex-col gap-12 2xl:gap-[217px] lg:flex-row lg:justify-between  ">
+          <div className="flex flex-col gap-12 2xl:gap-52 lg:flex-row lg:justify-between  ">
             {/* Left: Logo + description */}
             <div className="flex flex-col gap-5 w-[300px] 2xl:w-[592px]">
               <Link href="/" aria-label="Oriana Solutions – accueil">
@@ -161,27 +131,27 @@ export default function Footer() {
               </div>
 
               <div className="flex items-center justify-center sm:justify-start gap-6 sm:gap-2.5 mt-1">
-                <a
+                <Link
                   href="#"
                   aria-label="Instagram"
                   className="hover:opacity-70 transition-opacity"
                 >
                   <IconInstagram />
-                </a>
-                <a
+                </Link>
+                <Link
                   href="#"
                   aria-label="Facebook"
                   className="hover:opacity-70 transition-opacity"
                 >
                   <IconFacebook />
-                </a>
-                <a
+                </Link>
+                <Link
                   href="#"
                   aria-label="LinkedIn"
                   className="hover:opacity-70 transition-opacity"
                 >
                   <IconLinkedIn />
-                </a>
+                </Link>
               </div>
             </address>
           </div>

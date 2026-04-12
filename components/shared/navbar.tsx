@@ -5,13 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/ui/button";
 
-const links = [
-  { label: "Nos réalisations", href: "#realisations" },
-  { label: "Nos services", href: "#services" },
-  { label: "Contact", href: "#contact" },
-  { label: "À propos", href: "#a-propos" },
-  { label: "FAQ", href: "#faq" },
-];
+import { navbarLinks } from "@/data/navigation";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -27,7 +21,7 @@ export default function Navbar() {
 
   return (
     <div className="bg-primary-light backdrop-blur-[19.56px]">
-      <nav className="relative z-50 w-full  px-6 sm:px-16 xl:px-25 py-10 2xl:px-35 2xl:py-13.25 max-w-[1980px] mx-auto">
+      <nav className="relative z-50 w-full  px-6 sm:px-16 xl:px-25 py-5 2xl:px-35  max-w-[1980px] mx-auto">
         <div className="flex items-center justify-between">
           <Link href="/" onClick={close}>
             <Image
@@ -43,11 +37,11 @@ export default function Navbar() {
 
           {/* Desktop links */}
           <div className="hidden xl:flex items-center gap-6 2xl:gap-10">
-            {links.map(({ label, href }) => (
+            {navbarLinks.map(({ label, href }) => (
               <Link
                 key={href}
                 href={href}
-                className="text-base xl:text-lg 2xl:text-[22.36px] leading-[32.14px] tracking-[-0.22px] text-black/60 hover:text-black transition-colors whitespace-nowrap"
+                className="text-base xl:text-lg 3xl:text-[22.36px] leading-[32.14px] tracking-[-0.22px] text-black/60 hover:text-black transition-colors whitespace-nowrap"
               >
                 {label}
               </Link>
@@ -89,23 +83,21 @@ export default function Navbar() {
       <div
         onClick={close}
         aria-hidden
-        className={`xl:hidden fixed inset-0 z-40 bg-black/50 backdrop-blur-sm transition-opacity duration-300 ${
-          open
-            ? "opacity-100 pointer-events-auto"
-            : "opacity-0 pointer-events-none"
-        }`}
+        className={`xl:hidden fixed inset-0 z-40 bg-black/50 backdrop-blur-sm transition-opacity duration-300 ${open
+          ? "opacity-100 pointer-events-auto"
+          : "opacity-0 pointer-events-none"
+          }`}
       />
 
-      {/* Mobile drawer — slides down from top */}
+      {/* Mobile drawer — slides in from right */}
       <div
-        className={`xl:hidden fixed top-0 left-0 right-0 z-40 bg-primary-light shadow-xl transition-transform duration-300 ease-in-out ${
-          open ? "translate-y-0" : "-translate-y-full"
-        }`}
+        className={`xl:hidden fixed top-0 left-0 right-0 z-40 bg-primary-light shadow-xl transition-transform duration-300 ease-in-out ${open ? "translate-y-0" : "-translate-y-full"
+          }`}
       >
         <div className="h-25 sm:h-30" />
 
         <div className="flex flex-col px-6 sm:px-16 py-10 gap-2">
-          {links.map(({ label, href }) => (
+          {navbarLinks.map(({ label, href }) => (
             <Link
               key={href}
               href={href}

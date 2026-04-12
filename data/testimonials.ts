@@ -29,3 +29,10 @@ export const testimonials: Testimonial[] = [
     avatar: "/png/author.png",
   },
 ];
+
+export const testimonialsLogo = [
+  "/svg/logo0.svg",
+  "/svg/logo1.svg",
+  "/svg/logo2.svg",
+  "/svg/logo3.svg",
+];

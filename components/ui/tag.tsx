@@ -4,7 +4,7 @@ interface TagProps {
 
 export default function Tag({ children }: TagProps) {
   return (
-    <div className="inline-flex items-center  rounded-[13.98px] border-[1.4px] border-[#2222221A] px-[18.17px] py-[spacing/3]  text-[13px] lg:text-lg font-medium leading-7.75 lg:leading-10.75 tracking-[-0.45px]">
+    <div className="inline-flex items-center rounded-xl border border-black/10 px-4.5 py-1 text-base 3xl:text-lg font-medium leading-8 lg:leading-10 tracking-tight">
       {children}
     </div>
   );

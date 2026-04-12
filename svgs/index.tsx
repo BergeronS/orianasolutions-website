@@ -67,3 +67,59 @@ export function IconLinkedIn() {
     </svg>
   );
 }
+
+export function ArrowDiagonal({ className = "" }) {
+  return (
+    <svg
+      width="17"
+      height="17"
+      viewBox="0 0 17 17"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
+      <path
+        d="M12.0416 4.95834L4.95831 12.0417"
+        stroke="currentColor"
+        strokeWidth="1.41667"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M5.66669 4.95834H12.0417V11.3333"
+        stroke="currentColor"
+        strokeWidth="1.41667"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function ArrowRightStraight({ className = "" }) {
+  return (
+    <svg
+      width="17"
+      height="17"
+      viewBox="0 0 17 17"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
+      <path
+        d="M2.5 8.5H14.5"
+        stroke="currentColor"
+        strokeWidth="1.41667"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M9.5 4L14.5 8.5L9.5 13"
+        stroke="currentColor"
+        strokeWidth="1.41667"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
