@@ -5,9 +5,8 @@ import Container from "../shared/container";
 
 export default function ServicesSection() {
   return (
-    <Container className="w-full py-0! 2xl:px-[140px]!">
-      <div className="flex flex-col lg:flex-row 2xl:pl-20 gap-[49px] md:gap-[66px]">
-        
+    <Container className="w-full py-0! 2xl:px-[120px]! 3xl:px-[140px]!">
+      <div className="flex flex-col lg:flex-row 2xl:pl-20 gap-12 md:gap-16">
         <div className=" hidden lg:flex flex-1 max-w-[532px] relative min-h-[599px] ">
           <div className="absolute inset-0 rounded-[32px] overflow-hidden">
             <Image
@@ -20,7 +19,7 @@ export default function ServicesSection() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-[49px] md:gap-4 w-full lg:w-[50%] 2xl:w-[776px] shrink-0 justify-center py-5">
+        <div className="flex flex-col gap-12 md:gap-4 w-full lg:w-[50%] 2xl:w-[700px] 3xl:w-[776px] shrink-0 justify-center py-5">
           {services.map((service) => (
             <ServiceCard
               key={service.id}

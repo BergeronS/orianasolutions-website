@@ -1,14 +1,15 @@
 import { stats } from "@/data/stats";
 import Container from "../shared/container";
+import { Typography } from "@/components/ui/typography";
 
 export default function AboutSection() {
   return (
     <Container parentStyle="hidden lg:flex bg-surface-muted rounded-[20px]"  className="py-[52px]!">
       <div className="flex flex-col gap-10 xl:gap-[70px] 2xl:gap-30 w-full">
-        <p className="font-heading font-normal text-[22px] leading-[30px] md:text-[28px] md:leading-[36px] xl:text-[36px] xl:leading-[44px] xl:tracking-[-1.08px] text-title max-w-full xl:max-w-[677px]">
+        <Typography variant="h5" className="max-w-full xl:max-w-[677px]">
           De la stratégie à l&apos;exécution, nous connectons les entreprises
           aux projets d&apos;impact pour bâtir des partenariats rentables.
-        </p>
+        </Typography>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 2xl:gap-6   w-full">
           {stats.map((stat) => (
@@ -19,9 +20,9 @@ export default function AboutSection() {
               <span className="text-[11px] xl:text-[14px] leading-[20px] tracking-[1.68px] uppercase text-muted font-normal">
                 {stat.label}
               </span>
-              <span className="font-heading font-normal text-[28px] xl:text-[36px] xl:leading-[44px] xl:tracking-[-1.08px] text-title">
+              <Typography variant="h6">
                 {stat.value}
-              </span>
+              </Typography>
             </div>
           ))}
         </div>

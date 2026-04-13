@@ -11,15 +11,25 @@ import Footer from "@/components/shared/footer";
 export default function Home() {
   return (
     <>
-      <Navbar />
+      <div className="sticky top-0 z-50">
+        <Navbar />
+      </div>
       <HeroSection />
-      <Experties/>
-      <About/>
-      <ServicesSection/>
-      <RealisationsSection/>
-      <AboutSection/>
-      <Testimonial/>
-      <Footer/>
+      <div id="a-propos" className="sm:mt-5">
+        <Experties />
+      </div>
+      <div id="services">
+        <About />
+        <ServicesSection />
+      </div>
+      <div id="realisations">
+        <RealisationsSection />
+      </div>
+      <AboutSection />
+      <Testimonial />
+      <div id="contact">
+        <Footer />
+      </div>
     </>
   );
 }

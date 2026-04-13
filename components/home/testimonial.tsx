@@ -1,18 +1,12 @@
 import React from "react";
 import Container from "../shared/container";
 import TestimonialCard from "../ui/testimonial-card";
-import { testimonials } from "@/data/testimonials";
+import { testimonials, testimonialsLogo } from "@/data/testimonials";
 import Tag from "../ui/tag";
+import { Typography } from "@/components/ui/typography";
 import Image from "next/image";
 
 const Testimonial = () => {
-  const testimonialsLogo = [
-    "/svg/logo0.svg",
-    "/svg/logo1.svg",
-    "/svg/logo2.svg",
-    "/svg/logo3.svg",
-  ];
-
   return (
     <Container className="py-0!  ">
       <div className="flex flex-col justify-center items-center min-h-48 lg:h-104.25 mx-auto text-center gap-5 lg:gap-6.75">
@@ -20,20 +14,20 @@ const Testimonial = () => {
         <span className="lg:hidden flex">
           <Tag>Propulez votre entreprise</Tag>
         </span>
-        <h3 className="font-heading text-[32px] md:text-[50px] lg:text-[75px] lg:leading-[83px]   lg:tracking-[-6px]">
+        <Typography variant="h2" as="h3">
           Ce que nos clients disent
-        </h3>
-        <p className="text-[18px] text-body lg:text-[30px] leading-[124%] lg:leading-[43px] ">
+        </Typography>
+        <Typography variant="p-large">
           Enjoy customizable lists, team work tools, and smart
           <br className="hidden sm:flex" /> tracking all in one place. Set
           tasks, get reminders, and
           <br className="hidden sm:flex" /> see your progress simply and
           quickly.
-        </p>
+        </Typography>
       </div>
 
-      <div className="flex flex-col lg:gap-30">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[31px] py-9.5 lg:gap-[71px]">
+      <div className="flex flex-col items-center w-full  lg:gap-30">
+        <div className="w-full sm:max-w-full max-w-[80%]  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 py-10 lg:gap-16">
           {testimonials.map((testimonial) => (
             <TestimonialCard key={testimonial.id} testimonial={testimonial} />
           ))}

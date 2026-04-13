@@ -1,26 +1,27 @@
 import React from "react";
 import Container from "../shared/container";
 import Tag from "../ui/tag";
+import { Typography } from "@/components/ui/typography";
 
 const About = () => {
   return (
     <Container className="py-8!">
-      <div className="flex flex-col justify-center items-center max-w-[755px] lg:h-[380px] mx-auto text-center gap-y-[20px] sm:gap-y-[27px]">
+      <div className="flex flex-col justify-center items-center max-w-[755px] lg:h-[380px] mx-auto text-center gap-y-[16px] ">
         <span className="hidden lg:flex">
           <Tag>Propulez votre entreprise</Tag>
         </span>
-        <h3 className="font-heading text-[32px] md:text-[50px] xl:text-[75px] leading-[83px] tracking-normal lg:tracking-[-6px]">
+        <Typography variant="h2" as="h3" className="sm:mb-4">
           Nos services
-        </h3>
-        <p className="hidden lg:flex text-[18px] mt-3 text-body lg:text-[30px] leading-[124%] lg:leading-[43px]">
+        </Typography>
+        <Typography variant="p-large" className="hidden lg:flex mt-3 3xl:max-w-[620px] max-w-[550px]">
           Une expertise complète pour tous vos besoins en développement digital
-        </p>
+        </Typography>
 
-        <p className="lg:hidden flex text-[18px] text-body lg:text-[30px] leading-[124%] lg:leading-[43px]">
+        <Typography variant="p-large" className="lg:hidden flex mt-3">
           Enjoy customizable lists, team work tools, and smart tracking all in
           one place. Set tasks, get reminders, and see your progress simply and
           quickly.
-        </p>
+        </Typography>
       </div>
     </Container>
   );

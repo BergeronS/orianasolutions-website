@@ -12,7 +12,7 @@ export default function ServiceCard({
   href,
 }: ServiceCardProps) {
   return (
-    <div className=" w-full 2xl:w-[776px] bg-white border shadow-xl md:shadow-none border-[#DADADA] rounded-2xl p-6">
+    <div className=" w-full  bg-white border shadow-xl md:shadow-none border-[#DADADA] rounded-2xl p-6">
       <div className="flex flex-col items-center sm:items-start gap-3">
         <h3 className="font-heading font-normal text-xl leading-7 md:text-2xl md:leading-8 text-heading">
           {title}

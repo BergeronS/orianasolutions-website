@@ -21,7 +21,11 @@
 /* ── Tailwind v4 Theme ── */
 @theme {
   /* Breakpoints */
-  --breakpoint-xs: 430px;
+  --breakpoint-xs: 26.875rem;
+  --breakpoint-3xl: 102.125rem;
+  --breakpoint-4xl: 128.125rem;
+
+
 
   /* Colors */
   --color-primary: #0f53f2;
