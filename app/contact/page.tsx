@@ -1,10 +1,4 @@
-
-import AboutHero from "@/components/about/hero-section";
-import AboutHighlight from "@/components/about/highlight";
-import History from "@/components/about/history";
-import Mission from "@/components/about/mission";
-import Team from "@/components/about/team";
-import Values from "@/components/about/values";
+import ContactSection from "@/components/contact/contact-section";
 import AboutSectionMobileBlock from "@/components/shared/about-section";
 import Footer from "@/components/shared/footer";
 import Navbar from "@/components/shared/navbar";
@@ -18,16 +12,11 @@ export default function page() {
       <div>
         <AboutSectionMobileBlock
           tag="Everything you need"
-          title="À propos"
+          title="Contact"
           description="Oriana Solutions, votre expert en applications mobiles, web, SaaS et automatisation IA sur mesure."
         />
       </div>
-      <AboutHero />
-      <Mission />
-      <Team />
-      <AboutHighlight />
-      <History />
-      <Values />
+      <ContactSection />
       <div id="contact">
         <Footer />
       </div>

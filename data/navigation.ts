@@ -1,7 +1,7 @@
 export const navbarLinks = [
   { label: "Nos réalisations", href: "#realisations" },
   { label: "Nos services", href: "#services" },
-  { label: "Contact", href: "#contact" },
+  { label: "Contact", href: "/contact" },
   { label: "À propos", href: "/about" },
   { label: "FAQ", href: "#faq" },
 ];

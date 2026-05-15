@@ -18,7 +18,7 @@ export default function History() {
   const [lineProgress, setLineProgress] = useState<number[]>(
     new Array(timelineItems.length - 1).fill(0)
   );
-
+  
   const rafRef = useRef<number | null>(null);
   const timeoutsRef = useRef<ReturnType<typeof setTimeout>[]>([]);
 
