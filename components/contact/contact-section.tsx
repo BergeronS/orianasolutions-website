@@ -6,6 +6,8 @@ import Button from "../ui/button";
 import Input from "../ui/input";
 import { Typography } from "../ui/typography";
 import Image from "next/image";
+import { contactInfo, socialLinks } from "@/data/contact";
+
 
 export default function ContactSection() {
   const [errors, setErrors] = useState<Record<string, string>>({
@@ -63,73 +65,40 @@ export default function ContactSection() {
             </Typography>
 
             <div className="flex flex-col gap-5 text-sm">
-              <div  className="flex flex-col gap-2.5">
-                <p className="text-[#808080]">Courriel</p>
-                <p className="font-medium text-base text-[#0B1226]">
-                  info@orianasolutions.com
-                </p>
-              </div>
+              {contactInfo.map((item, index) => (
+                <div key={index} className="flex flex-col gap-2.5">
+                  <p className="text-[#808080]">{item.title}</p>
 
-              <div className="flex flex-col gap-2.5">
-                <p className="text-[#808080]">Téléphone</p>
-                <p className="font-medium text-base text-[#0B1226]">
-                  (123) 1221 2323
-                </p>
-              </div>
-
-              <div className="flex flex-col gap-2.5">
-                <p className="text-[#808080]">Adresse</p>
-                <div className="font-medium text-base text-[#0B1226] max-w-[296px]">
-                  <p>123 Innovation Avenue, Suite 456
-                  Tech District, San Francisco, CA 94107
-                  United States</p>
+                  <div
+                    className={`font-medium text-base 2xl:text-xl 3xl:text-2xl text-[#0B1226] ${
+                      item.maxWidth ? "max-w-[296px]" : ""
+                    }`}
+                  >
+                    <p className="whitespace-pre-line">{item.value}</p>
+                  </div>
                 </div>
-              </div>
+              ))}
 
               <div className="flex flex-col gap-2.5">
                 <p className="text-[#808080]">Suivez-nous</p>
+
                 <div className="flex gap-5 items-center justify-center md:justify-start">
-                  <a
-                    href="#"
-                    aria-label="Facebook"
-                    className="inline-flex items-center justify-center"
-                  >
-                    <Image
-                      src="/svg/FacebookLogo.svg"
-                      alt="facebook"
-                      width={24}
-                      height={24}
-                      className="w-6 h-6"
-                    />
-                  </a>
-
-                  <a
-                    href="#"
-                    aria-label="Instagram"
-                    className="inline-flex items-center justify-center"
-                  >
-                    <Image
-                      src="/svg/InstagramLogo.svg"
-                      alt="instagram"
-                      width={24}
-                      height={24}
-                      className="w-6 h-6"
-                    />
-                  </a>
-
-                  <a
-                    href="#"
-                    aria-label="LinkedIn"
-                    className="inline-flex items-center justify-center"
-                  >
-                    <Image
-                      src="/svg/LinkedinLogo.svg"
-                      alt="linkedin"
-                      width={24}
-                      height={24}
-                      className="w-6 h-6"
-                    />
-                  </a>
+                  {socialLinks.map((social, index) => (
+                    <a
+                      key={index}
+                      href={social.href}
+                      aria-label={social.ariaLabel}
+                      className="inline-flex items-center justify-center"
+                    >
+                      <Image
+                        src={social.icon}
+                        alt={social.alt}
+                        width={24}
+                        height={24}
+                        className="w-6 h-6"
+                      />
+                    </a>
+                  ))}
                 </div>
               </div>
             </div>
@@ -176,7 +145,9 @@ export default function ContactSection() {
                 />
 
                 {errors.message && (
-                  <p className="text-red-500 text-sm mt-1">{errors.message}</p>
+                  <p className="text-red-500 text-sm mt-1">
+                    {errors.message}
+                  </p>
                 )}
               </div>
 

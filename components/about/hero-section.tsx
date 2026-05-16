@@ -17,11 +17,11 @@ export default function AboutHero() {
             </div>
 
             <Typography variant="h3">
-              De l'idée au déploiement, nous créons les solutions technologiques qui soutiennent votre croissance.
+              {"De l'idée au déploiement, nous créons les solutions technologiques qui soutiennent votre croissance."}
             </Typography>
 
             <Typography variant="p-base" className="sm:max-w-[420px] ">
-              Oriana Solutions est une agence digitale spécialisée dans le développement d'applications sur mesure.<span className="md:hidden">Nous accompagnons les entreprises dans leur transformation digitale en créant des solutions innovantes et performantes.</span>
+             {" Oriana Solutions est une agence digitale spécialisée dans le développement d'applications sur mesure."}<span className="md:hidden">Nous accompagnons les entreprises dans leur transformation digitale en créant des solutions innovantes et performantes.</span>
             </Typography>
 
             <div className="sm:block hidden">

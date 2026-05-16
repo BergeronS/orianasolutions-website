@@ -107,10 +107,7 @@ export default function History() {
               variant="p-large"
               className="text-gray-500  leading-relaxed max-w-[480px] mt-8 sm:block hidden"
             >
-              Oriana Solutions est une agence digitale spécialisée dans le
-              développement d'applications sur mesure. Nous accompagnons les
-              entreprises dans leur transformation digitale en créant des
-              solutions innovantes et performantes.
+              {"Oriana Solutions est une agence digitale spécialisée dans le développement d'applications sur mesure. Nous accompagnons les entreprises dans leur transformation digitale en créant des solutions innovantes et performantes."}
             </Typography>
           </div>
 
