@@ -27,6 +27,7 @@ export default async function ServiceDetail({ params }: Params) {
           tag="Étude de cas"
           title="Quietnest"
           description="Développement d'une application mobile sur mesure"
+          icon="/svg/app-icon.svg"
         />
       </div>
       <ServiceDetailPage service={service} />

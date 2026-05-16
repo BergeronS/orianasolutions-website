@@ -2,6 +2,11 @@
 
 import { useState } from "react";
 import Container from "@/components/shared/container";
+import { Typography } from "../ui/typography";
+
+interface ServiceFAQProps {
+  title?: React.ReactNode;
+}
 
 const FAQ_ITEMS = [
   {
@@ -35,12 +40,18 @@ const FAQ_ITEMS = [
   },
 ];
 
-export default function ServiceFAQ() {
+export default function ServiceFAQ({ title }: ServiceFAQProps) {
   const [openId, setOpenId] = useState<number | null>(null);
 
   return (
-    <Container className="w-full sm:max-w-[80%]">
-       <div className="w-full flex flex-col">
+    <Container className="w-full flex flex-col sm:gap-8 gap-4">
+      {title && (
+        <Typography variant="h4" className="shrink-0 sm:text-start text-center">
+          {title}
+        </Typography>
+      )}
+      <div className="flex justify-center">
+        <div className="w-full flex flex-col sm:max-w-[80%]">
           {FAQ_ITEMS.map((item) => {
             const open = openId === item.id;
             return (
@@ -92,6 +103,7 @@ export default function ServiceFAQ() {
             );
           })}
         </div>
+      </div>
     </Container>
   );
 }

@@ -44,6 +44,7 @@ export const ServiceDetailPage = ({ service }: ServiceDetailPageProps) => {
           "Tout a commencé en 2020, nous avons décidé de créer une application mobile.",
         ]}
         image="/png/service1-3.png"
+        icon="/svg/app-icon.svg"
         reverse
       />
 

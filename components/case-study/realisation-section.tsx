@@ -6,21 +6,17 @@ import Container from "../shared/container";
 import { Typography } from "@/components/ui/typography";
 
 export default function RealisationsSection() {
-  const selectedProjects = projects.slice(1, 3);
-
   return (
     <Container>
       <div className="flex flex-col gap-10 xl:gap-16">
-
         {/* HEADER */}
-       <Typography variant="h4" className="shrink-0 text-center">
-            Nos autres réalisations
-          </Typography>
-          
+        <Typography variant="h4" className="shrink-0 sm:text-start text-center">
+          Quelques unes de nos réalisations
+        </Typography>
 
         {/* CARDS */}
         <div className="flex flex-wrap items-center justify-center gap-7 lg:border border-surface-muted rounded-[40px] p-3 lg:p-10 xl:gap-6 2xl:gap-10">
-          {selectedProjects.map((project) => (
+          {projects.map((project) => (
             <ProjectCard
               key={project.id}
               title={project.title}
@@ -29,8 +25,7 @@ export default function RealisationsSection() {
             />
           ))}
         </div>
-
       </div>
     </Container>
   );
-};
+}
