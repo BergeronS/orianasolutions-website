@@ -25,7 +25,12 @@ export const HeroSection = () => {
       </Container>
 
       <DynamicServiceSection
-        title="Qu'est-ce q'une application mobile?"
+        title={
+            <>
+              Qu'est-ce q'une<br />
+              application mobile?
+            </>
+          }
         description={[
           "Tout a commencé en 2020, nous avons décidé de créer une application mobile. Tout a commencé en 2020, nous avons décidé de créer une application mobile.",
           "Tout a commencé en 2020, nous avons décidé de créer une application mobile.",
@@ -72,7 +77,7 @@ export const HeroSection = () => {
           title={
             <>
               Questions fréquentes <br />
-              sur les applications mobiles
+              <span className="sm:block hidden">sur les applications mobiles</span>
             </>
           }
         />

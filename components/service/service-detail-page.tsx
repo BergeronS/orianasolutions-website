@@ -15,7 +15,7 @@ export const ServiceDetailPage = ({ service }: ServiceDetailPageProps) => {
   return (
     <>
       <Container className="w-full max-w-[90%]">
-        <div className=" sm:flex hidden flex-col items-center gap-12 py-14">
+        <div className=" sm:flex hidden flex-col items-center gap-12 pt-6">
           <Tag>Étude de cas</Tag>
 
           <Typography variant="h2" className="text-center">
@@ -32,6 +32,7 @@ export const ServiceDetailPage = ({ service }: ServiceDetailPageProps) => {
           description={section.description}
           image={section.image}
           reverse={section.reverse}
+          headingClassName="max-w-[350px]!"
         />
       ))}
 
@@ -46,6 +47,7 @@ export const ServiceDetailPage = ({ service }: ServiceDetailPageProps) => {
         image="/png/service1-3.png"
         icon="/svg/app-icon.svg"
         reverse
+        headingClassName="max-w-[350px]!"
       />
 
      <div className="lg:mt-10">
@@ -56,6 +58,7 @@ export const ServiceDetailPage = ({ service }: ServiceDetailPageProps) => {
           "Tout a commencé en 2020, nous avons décidé de créer une application mobile.",
         ]}
         image="/png/service1-4.png"
+        headingClassName="max-w-[350px]!"
       />
      </div>
 

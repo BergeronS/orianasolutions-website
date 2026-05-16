@@ -5,8 +5,8 @@ import { processSteps } from "@/data/process";
 export default function ProcessSection() {
   return (
     <Container parentStyle="sm:bg-primary-light bg-white" className="sm:max-w-[85%] w-full">
-      <div className="flex flex-col items-start text-left gap-6 ">
-        <Typography variant="h3">Notre processus</Typography>
+      <div className="flex flex-col sm:items-start sm:text-left gap-6 ">
+        <Typography variant="h3" className="sm:text-start text-center">Notre processus</Typography>
 
         <p className="max-w-[650px] !sm:text-[18px] !text-[12px] ">
           Our platform managing personal finances or growing your investment portfolio, our system
