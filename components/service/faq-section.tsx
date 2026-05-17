@@ -59,9 +59,7 @@ export default function ServiceFAQ({ title }: ServiceFAQProps) {
                 <div className="w-full flex items-center justify-between gap-4">
                   <button
                     onClick={() => setOpenId(open ? null : item.id)}
-                    className={`w-full flex items-center justify-between gap-4 ${
-                      open ? "pt-6 pb-0" : "py-6"
-                    }`}
+                    className="w-full flex items-center justify-between gap-4 py-6"
                     aria-expanded={open}
                   >
                     <p
@@ -81,18 +79,18 @@ export default function ServiceFAQ({ title }: ServiceFAQProps) {
                 </div>
 
                 <div
-                  className={`w-full overflow-hidden transition-all duration-500 ease-in-out ${
-                    open ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
+                  className={`grid transition-all duration-500 ease-in-out ${
+                    open
+                      ? "grid-rows-[1fr] opacity-100"
+                      : "grid-rows-[0fr] opacity-0"
                   }`}
                 >
-                  <div
-                    className={`transition-all duration-500 ease-in-out ${
-                      open ? "pt-3 pb-6" : "py-0"
-                    }`}
-                  >
-                    <p className="text-xs 2xl:text-sm 3xl:text-base text-[#333333] leading-6">
-                      {item.answer}
-                    </p>
+                  <div className="overflow-hidden">
+                    <div className="pt-3 pb-6">
+                      <p className="text-xs 2xl:text-sm 3xl:text-base text-[#333333] leading-6">
+                        {item.answer}
+                      </p>
+                    </div>
                   </div>
                 </div>
 

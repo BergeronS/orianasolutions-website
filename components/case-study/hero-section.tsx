@@ -13,7 +13,7 @@ export const HeroSection = () => {
   return (
     <>
       <Container className="w-full max-w-[90%]">
-        <div className=" sm:flex hidden flex-col items-center gap-12 ">
+        <div className=" sm:flex hidden flex-col items-center gap-6 pt-10 ">
           <Tag>Services</Tag>
 
           <Typography variant="h2" className="text-center">
@@ -26,15 +26,40 @@ export const HeroSection = () => {
 
       <DynamicServiceSection
         title={
-            <>
-              Qu'est-ce q'une<br />
-              application mobile?
-            </>
-          }
-        description={[
-          "Tout a commencé en 2020, nous avons décidé de créer une application mobile. Tout a commencé en 2020, nous avons décidé de créer une application mobile.",
-          "Tout a commencé en 2020, nous avons décidé de créer une application mobile.",
-        ]}
+          <>
+            Qu'est-ce q'une
+            <br />
+            application mobile?
+          </>
+        }
+        description={
+          <>
+            {/* Mobile */}
+            <span className="block sm:hidden">
+              Tout a commencé en 2020, nous avons <br /> décidé de créer une
+              application mobile.
+              <br /> Tout a commencé en 2020, nous avons
+              <br /> décidé de créer une application mobile.
+              <br />
+              <br />
+              Tout a commencé en 2020, nous avons
+              <br />
+              décidé de créer une application mobile.
+            </span>
+
+            {/* Desktop */}
+            <span className="hidden sm:block">
+              Tout a commencé en 2020, nous avons décidé <br />
+              de créer une application mobile. Tout a <br />
+              commencé en 2020, nous avons décidé de créer <br />
+              une application mobile.
+              <br />
+              <br />
+              Tout a commencé en 2020, nous avons décidé <br />
+              de créer une application mobile.
+            </span>
+          </>
+        }
         image="/png/real4.png"
         reverse
       />
@@ -42,10 +67,34 @@ export const HeroSection = () => {
       <div className="">
         <DynamicServiceSection
           title="Nous sommes là pour vous accompagner de A à Z"
-          description={[
-            "Tout a commencé en 2020, nous avons décidé de créer une application mobile. Tout a commencé en 2020, nous avons décidé de créer une application mobile.",
-            "Tout a commencé en 2020, nous avons décidé de créer une application mobile.",
-          ]}
+          description={
+            <>
+              {/* Mobile */}
+              <span className="block sm:hidden">
+                Tout a commencé en 2020, nous avons <br /> décidé de créer une
+                application mobile.
+                <br /> Tout a commencé en 2020, nous avons
+                <br /> décidé de créer une application mobile.
+                <br />
+                <br />
+                Tout a commencé en 2020, nous avons
+                <br />
+                décidé de créer une application mobile.
+              </span>
+
+              {/* Desktop */}
+              <span className="hidden sm:block">
+                Tout a commencé en 2020, nous avons décidé <br />
+                de créer une application mobile. Tout a <br />
+                commencé en 2020, nous avons décidé de créer <br />
+                une application mobile.
+                <br />
+                <br />
+                Tout a commencé en 2020, nous avons décidé <br />
+                de créer une application mobile.
+              </span>
+            </>
+          }
           image="/png/real5.png"
           parentStyle="bg-primary-light"
           className="pt-20"
@@ -77,7 +126,9 @@ export const HeroSection = () => {
           title={
             <>
               Questions fréquentes <br />
-              <span className="sm:block hidden">sur les applications mobiles</span>
+              <span className="sm:block hidden">
+                sur les applications mobiles
+              </span>
             </>
           }
         />

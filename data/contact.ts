@@ -10,9 +10,10 @@ export const contactInfo = [
   },
   {
     title: "Adresse",
-    value: `123 Innovation Avenue, Suite 456
+    valueDesktop: `123 Innovation Avenue, Suite 456
 Tech District, San Francisco, CA 94107
 United States`,
+    valueMobile: "Montréal, Québec",
     maxWidth: true,
   },
 ];

@@ -11,7 +11,8 @@ export default function ServiceAboutSection() {
       <div className="w-full flex flex-col lg:flex-row items-center gap-10">
         <div className="flex-1 flex flex-col sm:items-start items-center gap-10">
           <div className="flex flex-col sm:gap-6 gap-4 sm:items-start items-center sm:text-left text-center">
-            <div className="w-full sm:block hidden">
+            <div className="flex flex-col gap-14">
+              <div className="w-full sm:block hidden">
               <Tag>À propos de nous</Tag>
             </div>
 
@@ -20,6 +21,7 @@ export default function ServiceAboutSection() {
               <br />
               avec nous
             </Typography>
+            </div>
 
             <Typography
               variant="p-large"

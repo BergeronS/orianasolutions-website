@@ -15,7 +15,7 @@ export const ServiceDetailPage = ({ service }: ServiceDetailPageProps) => {
   return (
     <>
       <Container className="w-full max-w-[90%]">
-        <div className=" sm:flex hidden flex-col items-center gap-12 pt-6">
+        <div className=" sm:flex hidden flex-col items-center gap-6 pt-10">
           <Tag>Étude de cas</Tag>
 
           <Typography variant="h2" className="text-center">
@@ -39,28 +39,82 @@ export const ServiceDetailPage = ({ service }: ServiceDetailPageProps) => {
       <ServiceStats service={service} />
 
       <DynamicServiceSection
-        title="Tout a commencé en 2022 lors d'une défi"
-        description={[
-          "Tout a commencé en 2020, nous avons décidé de créer une application mobile. Tout a commencé en 2020, nous avons décidé de créer une application mobile.",
-          "Tout a commencé en 2020, nous avons décidé de créer une application mobile.",
-        ]}
+        title={
+          <>
+            Tout a commencé
+            <br />
+            en 2022 lors d'une défi
+          </>
+        }
+        description={
+            <>
+              {/* Mobile */}
+              <span className="block sm:hidden">
+                Tout a commencé en 2020, nous avons <br /> décidé de créer une
+                application mobile.<br /> Tout a commencé en 2020, nous avons<br /> décidé
+                de créer une application mobile.<br /><br />
+                 Tout a commencé en 2020, nous
+                avons<br />
+                 décidé de créer une application mobile.
+              </span>
+
+              {/* Desktop */}
+              <span className="hidden sm:block">
+                Tout a commencé en 2020, nous avons décidé <br />
+                de créer une application mobile. Tout a <br />
+                commencé en 2020, nous avons décidé de créer <br />
+                une application mobile.
+                <br />
+                <br />
+                Tout a commencé en 2020, nous avons décidé <br />
+                de créer une application mobile.
+              </span>
+            </>
+          }
         image="/png/service1-3.png"
         icon="/svg/app-icon.svg"
         reverse
-        headingClassName="max-w-[350px]!"
+        headingClassName="max-w-[400px]!"
       />
 
-     <div className="lg:mt-10">
-       <DynamicServiceSection
-        title="Tout a commencé en 2022 lors d'une défi"
-        description={[
-          "Tout a commencé en 2020, nous avons décidé de créer une application mobile. Tout a commencé en 2020, nous avons décidé de créer une application mobile.",
-          "Tout a commencé en 2020, nous avons décidé de créer une application mobile.",
-        ]}
-        image="/png/service1-4.png"
-        headingClassName="max-w-[350px]!"
-      />
-     </div>
+      <div className="lg:mt-10">
+        <DynamicServiceSection
+          title={
+            <>
+              Tout a commencé
+              <br />
+              en 2022 lors d'une défi
+            </>
+          }
+          description={
+            <>
+              {/* Mobile */}
+              <span className="block sm:hidden">
+                Tout a commencé en 2020, nous avons <br /> décidé de créer une
+                application mobile.<br /> Tout a commencé en 2020, nous avons<br /> décidé
+                de créer une application mobile.<br /><br />
+                 Tout a commencé en 2020, nous
+                avons<br />
+                 décidé de créer une application mobile.
+              </span>
+
+              {/* Desktop */}
+              <span className="hidden sm:block">
+                Tout a commencé en 2020, nous avons décidé <br />
+                de créer une application mobile. Tout a <br />
+                commencé en 2020, nous avons décidé de créer <br />
+                une application mobile.
+                <br />
+                <br />
+                Tout a commencé en 2020, nous avons décidé <br />
+                de créer une application mobile.
+              </span>
+            </>
+          }
+          image="/png/service1-4.png"
+          headingClassName="max-w-[350px]!"
+        />
+      </div>
 
       <RealisationsSection />
     </>

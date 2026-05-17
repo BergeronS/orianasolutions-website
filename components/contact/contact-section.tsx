@@ -74,7 +74,8 @@ export default function ContactSection() {
                       item.maxWidth ? "max-w-[296px]" : ""
                     }`}
                   >
-                    <p className="whitespace-pre-line">{item.value}</p>
+                    <span className="hidden md:block whitespace-pre-line">{item.valueDesktop ?? item.value}</span>
+  <span className="block md:hidden">{item.valueMobile ?? item.value}</span>
                   </div>
                 </div>
               ))}

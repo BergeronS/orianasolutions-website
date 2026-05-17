@@ -16,8 +16,8 @@ export default function AboutHighlight() {
             En 2024, nous avons remporté le concours OseEntreprendre.
           </Typography>
 
-          <Typography variant="p-large" className="max-w-[480px] ">
-           <span className="sm:block hidden">{"Oriana Solutions est une agence digitale spécialisée dans le développement d'applications sur mesure."}</span> <span className="sm:hidden">Enjoy customizable lists, team work tools, and smart tracking all in one place. Set tasks, get reminders, and see your progress simply and quickly.</span>
+          <Typography variant="p-large" className="sm:max-w-[480px] w-full">
+           <span className="sm:block hidden">{"Oriana Solutions est une agence digitale spécialisée dans le développement d'applications sur mesure."}</span> <span className="sm:hidden text-[15px]!">Enjoy customizable lists, team work tools, and smart tracking all in one place. Set tasks, get reminders, and see your progress simply and quickly.</span>
           </Typography>
           </div>
         </div>

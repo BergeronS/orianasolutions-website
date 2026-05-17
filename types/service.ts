@@ -1,17 +1,17 @@
 // types/service.ts
 
 export interface ServiceSection {
-  title: string;
-  description: string[];
+  title: React.ReactNode;
+  description: React.ReactNode;
   image: string;
   reverse?: boolean;
 }
 
 export interface ServiceType {
   id: number;
-  title: string;
+  title: React.ReactNode;
   slug: string;
-  description: string;
+  description: React.ReactNode;
   image: string;
   href?: string;
   downloads?: string | number;

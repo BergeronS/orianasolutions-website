@@ -4,7 +4,7 @@ import { Typography } from "@/components/ui/typography";
 
 interface DynamicServiceSectionProps {
   title: React.ReactNode;
-  description: string[];
+  description: React.ReactNode;
   image: string;
   reverse?: boolean;
   className?: string;
@@ -34,21 +34,16 @@ export default function DynamicServiceSection({
         } items-center gap-14 `}
       >
         <div className="flex-1 flex flex-col gap-6 sm:text-left text-center">
-          <Typography variant="h4" className={`max-w-[450px] ${headingClassName || ""}`}>
+          <Typography
+            variant="h4"
+            className={`max-w-[500px] ${headingClassName || ""}`}
+          >
             {title}
           </Typography>
 
           {/* MULTIPLE PARAGRAPHS */}
-          <div className="flex flex-col gap-5">
-            {description.map((paragraph, index) => (
-              <Typography
-                key={index}
-                variant="p-large"
-                className="max-w-[450px]"
-              >
-                {paragraph}
-              </Typography>
-            ))}
+          <div className="flex flex-col gap-5 max-w-[650px]">
+            <p className="text-base xl:text-lg 2xl:text-xl 3xl:text-2xl">{description}</p>
           </div>
 
           {icon && (

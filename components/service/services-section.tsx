@@ -11,12 +11,12 @@ export default function ServicesSection() {
         {servicesPage.map((item, idx) => (
           <div
             key={item.id}
-            className={`flex flex-col lg:flex-row items-center gap-8 md:gap-12`}
+            className={`flex flex-col lg:flex-row items-center gap-8 md:gap-10`}
           >
-            <div className="flex-1 w-full sm:max-w-[532px] relative h-56 sm:h-72 md:h-80 sm:min-h-[350px] min-h-[300px]  rounded-[12px] overflow-hidden">
+            <div className="flex-1 w-full sm:max-w-[422px] relative h-56 sm:h-72 md:h-80 sm:min-h-[350px] min-h-[300px]  rounded-[12px] overflow-hidden">
               <Image
                 src={item.image}
-                alt={item.title}
+                alt="service image"
                 fill
                 sizes="(max-width: 480px) 100vw, (max-width: 1024px) 50vw, 45vw"
                 className="object-cover"
@@ -28,7 +28,7 @@ export default function ServicesSection() {
                 {item.title}
               </h3>
 
-              <p className="text-[#535353] text-sm 2xl:text-base max-w-[700px]">
+              <p className="text-[#535353] text-xs 2xl:text-sm 3xl:text-base sm:max-w-[450px]">
                 {item.description}
               </p>
 

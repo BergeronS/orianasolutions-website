@@ -22,7 +22,7 @@ export default function ProcessSection() {
               <div
                 key={step.id}
                 className={`
-                  sm:bg-white  bg-primary-light rounded-xl p-4 
+                  sm:bg-[#F1F7FF]  bg-primary-light rounded-xl p-4 
                   ${isFirstRow ? "md:col-span-3" : "md:col-span-2"}
                 `}
               >

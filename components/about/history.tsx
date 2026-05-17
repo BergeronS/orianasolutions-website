@@ -171,7 +171,7 @@ export default function History() {
                       {item.year}
                     </h3>
                     <p
-                      className="text-sm leading-relaxed text-gray-400 max-w-[450px]"
+                      className="text-sm leading-relaxed text-gray-400 max-w-[450px] whitespace-pre-line"
                       style={{
                         color: isDotActive ? "#6b7280" : "#d1d5db",
                         transition: "color 0.35s ease",

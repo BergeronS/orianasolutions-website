@@ -12,7 +12,7 @@ export default function Mission() {
 
 				<Typography variant="h4" className="max-w-[850px]">
 					<span className="sm:block hidden">At Bienes™ we specialize in connecting buyers, sellers, and renters with exceptional properties. With years of expertise and a customer-first approach, we make real estate simple and stress-free.</span>
-                    <span className="sm:hidden !text-[24px]">Accompagner les entreprises dans leur transformation digitale en créant des solutions innovantes et performantes.</span>
+                    <span className="sm:hidden !text-[20px] leading-[5px]!">Accompagner les entreprises dans leur transformation digitale en créant des solutions innovantes et performantes.</span>
 				</Typography>
 			</div>
 		</Container>
